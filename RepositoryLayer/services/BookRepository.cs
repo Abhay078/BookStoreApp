@@ -108,5 +108,17 @@ namespace RepositoryLayer.services
             }
            
         }
+        public BookEntity GetBookById(int id)
+        {
+            try
+            {
+                return _context.Book.FirstOrDefault(x => x.BookId == id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

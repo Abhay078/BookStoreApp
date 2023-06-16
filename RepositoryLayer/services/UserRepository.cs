@@ -168,6 +168,24 @@ namespace RepositoryLayer.services
             }
         }
 
+        public AddressEntity GetAddress(long UserId)
+        {
+            try
+            {
+                var Check=context.Address.FirstOrDefault(x=>x.UserId==UserId);
+                if (Check != null)
+                {
+                    return Check;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
     }
 }

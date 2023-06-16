@@ -35,11 +35,11 @@ namespace RepositoryLayer.services
             
 
         }
-        public Boolean DeleteItem(long ItemId)
+        public Boolean DeleteItem(int bookId)
         {
             try
             {
-                var check=context.WishList.FirstOrDefault(x=>x.ItemId==ItemId);
+                var check=context.WishList.FirstOrDefault(x=>x.BookId==bookId);
                 if(check!=null)
                 {
                     context.WishList.Remove(check);

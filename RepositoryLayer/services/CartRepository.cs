@@ -35,11 +35,11 @@ namespace RepositoryLayer.services
                 throw;
             }
         }
-        public Boolean DeleteItem(long ItemId)
+        public Boolean DeleteItem(int BookId)
         {
             try
             {
-                var Check=context.Cart.FirstOrDefault(x=>x.CartItemId==ItemId);
+                var Check=context.Cart.FirstOrDefault(x=>x.BookId==BookId);
                 if (Check != null)
                 {
                     context.Cart.Remove(Check);
