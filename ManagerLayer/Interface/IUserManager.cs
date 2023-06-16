@@ -13,6 +13,7 @@ namespace ManagerLayer.Interface
         public string Generate(string Email, long Userid,string role);
         public AddressEntity AddAddress(AddAddressModel model,long UserId);
         public AddressEntity UpdateAddress(AddAddressModel model, long AddressId);
+        public AddressEntity GetAddress(long UserId);
 
     }
 }

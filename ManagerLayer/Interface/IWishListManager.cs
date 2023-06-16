@@ -9,7 +9,7 @@ namespace ManagerLayer.Interface
     public interface IWishListManager
     {
         public WishListEntity AddItem(int BookId, long UserId);
-        public Boolean DeleteItem(long ItemId);
+        public Boolean DeleteItem(int BookId);
         public List<WishListEntity> GetAll();
     }
 }
